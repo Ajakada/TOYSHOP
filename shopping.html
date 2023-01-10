@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Shopping Form</title>
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <style type="text/css">
+         select {
+            width: 100px;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="topnav">
+         <a href="home.html">Home</a>
+         <a href="menu.html">Menu</a>
+         <a class="active" href="shopping.html">Shopping Form</a>
+         <a href="contact.html" style="float:right">Contact</a>
+      </div>
+      <center>
+         <h4>List of Items</h4>
+      </center>
+      <div style="margin: 0 10% 0 10%">
+      <table >
+         <tr style="background: grey;">
+            <th>Items</th>
+            <th>Properties</th>
+            <th>Number of Items</th>
+            <th>Cost ($)</th>
+         </tr>
+         <tr>
+            <td><input type="checkbox" id="cfudge" value="35">Teddy bear</td>
+            <td>
+               <form name="form">
+                  <input type="radio" name="radio1" value="35">small [$35]<br>
+                  <input type="radio" name="radio1" value="55" >medium [55]<br>
+                  <input type="radio" name="radio1" value="85" >big [$85]<br>
+                  <input type="radio" name="radio1" value="0" >None
+               </form>
+            </td>
+            <td>
+               <select name="quantity" id="quantity1" value="1" onchange="firstItem()">
+                  <option value="1" selected disabled>Units</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+               </select>
+            </td>
+            <td>
+               <p id="gross_total1">$0.00</p>
+            </td>
+         </tr>
+         <tr>
+            <td><input type="checkbox" id="gmp" value="26">Rubber ducky</td>
+            <td>
+               <form name="form">
+                  <input type="radio" name="radio2" value="12" >small [$12]<br>
+                  <input type="radio" name="radio2" value="18" >medium [$18]<br>
+                  <input type="radio" name="radio2" value="24" >big [$24]<br>
+                  <input type="radio" name="radio2" value="0" >None
+               </form>
+            </td>
+            <td>
+               <select name="quantity" id="quantity2" value="1" onchange="secondItem()">
+                  <option value="1" selected disabled>Units</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+               </select>
+            </td>
+            <td>
+               <p id="gross_total2">$0.00</p>
+            </td>
+         </tr>
+         <tr>
+            <td><input type="checkbox" id="fc" value="18">Barbie set</td>
+            <td>
+               <form name="form">
+                  <input type="radio" name="radio3" value="25" >small [$25]<br>
+                  <input type="radio" name="radio3" value="45" >medium [$45]<br>
+                  <input type="radio" name="radio3" value="70" >big [$70]<br>
+                  <input type="radio" name="radio3" value="0" >None
+               </form>
+            </td>
+            <td>
+               <select name="quantity" id="quantity3" value="1" onchange="thirdItem()">
+                  <option value="1" selected disabled>Units</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+               </select>
+            </td>
+            <td>
+               <p id="gross_total3">$0.00</p>
+            </td>
+         </tr>
+         <tr>
+            <td><input type="checkbox" id="sd" value="35">Airplane</td>
+            <td>
+               <form name="form">
+                  <input type="radio" name="radio4" value="12" >small [$12]<br>
+                  <input type="radio" name="radio4" value="20" >medium [$20]<br>
+                  <input type="radio" name="radio4" value="30" >big [$30]<br>
+                  <input type="radio" name="radio4" value="0" >None
+               </form>
+            </td>
+            <td>
+               <select name="quantity" id="quantity4" value="1" onchange="fourthItem()">
+                  <option value="1" selected disabled>Units</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+               </select>
+            </td>
+            <td>
+               <p id="gross_total4">$0.00</p>
+            </td>
+         </tr>
+         <tr>
+            <td colspan="2">Total Cost</td>
+            <td><button onclick="getGrandTotal()">Calculate</button></td>
+            <td id="total">($) 0</td>
+         </tr>
+      </table>
+   </div>
+
+      <script src="script.js"></script>
+   </body>
+</html>
